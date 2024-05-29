@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perdóname</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Maria P...</h1>
+    <p>Soy consciente del daño que te hice, puede que esto no mejore absolutamente nada</p>
+    <p>
+      Sin embargo, quiero que veas esto porque quiero que notes que me importas y que quiero seguir hablando contigo.
+    </p>
+    <p>
+      No sé qué vaya a pasar a futuro, tampoco quiero hacerme ninguna ilusión
+    </p>
+    <p>
+      Si lo deseas, podemos hablar y de ser así abrirme totalmente contigo
+    </p>
+    <div class="button">
+      <button class="button-fixed" onclick="window.location.href='en-serio.html'">Hablemos</button>
+      <button class="button-escape" id="noGracias">No, gracias</button>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.button-escape').forEach(buttonEscape => {
+        buttonEscape.addEventListener('mouseover', () => {
+            const container = buttonEscape.closest('.container');
+            const containerRect = container.getBoundingClientRect();
+            const buttonRect = buttonEscape.getBoundingClientRect();
+
+            const newTop = Math.random() * (containerRect.height - buttonRect.height);
+            const newLeft = Math.random() * (containerRect.width - buttonRect.width);
+
+            buttonEscape.style.position = 'absolute';
+            buttonEscape.style.top = `${newTop}px`;
+            buttonEscape.style.left = `${newLeft}px`;
+        });
+    });
+</script>
+
+</body>
+</html>
