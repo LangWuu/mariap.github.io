@@ -1,0 +1,116 @@
+/* Importar fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;700&display=swap');
+
+/* Estilo base */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: linear-gradient(to bottom, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título */
+h1 {
+    font-family: 'Lobster', cursive;
+    color: #ff6666;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Párrafos */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Estilo de los botones */
+.button {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button-fixed, .button-escape, .button-yes {
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-fixed:hover, .button-yes:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.1);
+}
+
+/* Añadiendo estilo de botón de escape */
+.button-escape {
+    background-color: #ff9999;
+    position: relative;
+}
+
+.button-escape:hover {
+    background-color: #ff6666;
+    transform: scale(1.1);
+}
+
+/* Añadir transición al agrandamiento */
+.button-grow {
+    transition: transform 0.3s;
+}
+
+/* Añadir efecto de crecimiento al hacer clic */
+.button-grow:hover {
+    transform: scale(1.1);
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
